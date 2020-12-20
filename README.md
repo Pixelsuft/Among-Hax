@@ -1,4 +1,4 @@
-# Among-Hax
+# Among Hax
 Among Us Cheat
 # Worked?
 Work in progress. <br />
