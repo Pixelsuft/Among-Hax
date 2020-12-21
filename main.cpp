@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <vector>
+using namespace std;
 bool no_cooldown_active=false;
 //Made by PixelSuft
 BOOL writeMemory(uintptr_t const address, std::vector<uint8_t> const& bytes){
@@ -13,6 +14,7 @@ DWORD WINAPI main(LPVOID lpParam){
         FILE* f;
         freopen_s(&f, "CONOUT$", "w", stdout);
         SetConsoleTitleA("Pixelsuft Among Hax");
+        setlocale(0,"");
         while(true){
                 if(no_cooldown_active==false)cout <<"1)No cooldown (off)" <<endl;
                 else cout <<"1)No cooldown (on)" <<endl;
