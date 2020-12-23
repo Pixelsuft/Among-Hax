@@ -1,6 +1,10 @@
 #include <Windows.h>
 #include <iostream>
 #include <vector>
+
+#include <WTypesbase.h>  //beta
+#include <cstdint>  //beta
+
 using namespace std;
 //Made by PixelSuft
 HANDLE handle;
