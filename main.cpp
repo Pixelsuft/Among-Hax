@@ -42,7 +42,7 @@ DWORD WINAPI main(LPVOID lpParam){
 				}
 				else
 				{
-					if(writeMemory(game_a + 0xE4955A, { 0x90, 0x90, 0x90, 0x90, 0x90 }))
+					if(writeMemory(game_a + 0xE4955A, { 0xF3, 0x0F, 0x11, 0x46, 0x44 }))
 					{
 						no_cooldown_on=false;
 						was_changed=true;
