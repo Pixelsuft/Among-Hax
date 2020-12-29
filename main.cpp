@@ -26,20 +26,28 @@ DWORD WINAPI main(LPVOID lpParam){
         SetConsoleTitleA("Pixelsuft Among Hax");
 		system("color 0a");
 		cout <<"Pixelsuft Among Hax" <<endl <<"Created by Pixelsuft" <<endl <<endl;
+		bool no_cooldown_on=false;
+		bool noclip_on=false;
 		while(true)
 		{
-		if(true){
+		if(GetAsyncKeyState(VK_F1))
+		{
+		if(no_cooldown_on){
 			if(writeMemory(game_a + 0xE4955A, { 0x90, 0x90, 0x90, 0x90, 0x90 }))
 				cout <<"No cooldown [on]" <<endl;
 			else cout <<"No cooldown [error]" <<endl;
 		}
 		else cout <<"No cooldown [off]" <<endl;
-		if(true){
+		}
+		if(GetAsyncKeyState(VK_F1))
+		{
+		if(noclip_on){
 			if(writeMemory(up + 0x960ca6, { 0x85 }))
 				cout <<"Noclip [on]" <<endl;
 			else cout <<"Noclip [error]" <<endl;
 		}
 		else cout <<"Noclip [off]" <<endl;
+		}
 		}
 		cout <<endl <<"Now you can close this window";
         FreeConsole();
