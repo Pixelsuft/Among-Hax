@@ -9,11 +9,11 @@
 using namespace std;
 //Made by PixelSuft
 HANDLE handle;
-void WPM(uintptr_t address, T buffer)    //short function for writing
+/*void WPM(uintptr_t address, T buffer)    //short function for writing
 {
     WriteProcessMemory(handle, (LPVOID)address, &buffer, sizeof(buffer), NULL);
 }
-
+*/
 BOOL writeMemory(uintptr_t const address, std::vector<uint8_t> const& bytes){
         return WriteProcessMemory(GetCurrentProcess(), reinterpret_cast<LPVOID>(address), bytes.data(), bytes.size(), nullptr);
 }
@@ -81,7 +81,7 @@ DWORD WINAPI main(LPVOID lpParam){
 				else cout <<"[OFF]";
 				cout <<";" <<endl;
 				cout <<"NoClip [F2] ";
-				if(noclip==true)cout <<"[ON]";
+				if(noclip_on==true)cout <<"[ON]";
 				else cout <<"[OFF]";
 				cout <<";" <<endl;
 				cout <<"Break [ESC]" <<";" <<endl;
